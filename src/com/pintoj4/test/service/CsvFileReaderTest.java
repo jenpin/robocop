@@ -18,7 +18,7 @@ class CsvFileReaderTest extends CsvFileReader {
 
     @Test
     void readFile_shouldReturnListSize12() {
-       List <String> outputList = reader.readFile ( "/Users/jpinto/Robot/src/com/pintoj4/resources/data/basicInputFile" );
+       List <String> outputList = reader.readFile ( "com/pintoj4/resources/data/basicInputFile" );
        Assertions.assertEquals ( 12,outputList.size () );
     }
 
