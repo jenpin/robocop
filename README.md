@@ -11,4 +11,5 @@ The entry point for this program is RoboCopEntryPoint.java
 The program hasn't been built using any build tool like Gradle or Maven.
 
 The program can be run using simple command line
+javac RoboCopEntryPoint.java // this is to compile your java file.
 java RoboCopEntryPoint <filename>
