@@ -1,11 +1,8 @@
 package com.pintoj4.main.service;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -18,7 +15,7 @@ public class CsvFileReader implements FileReader {
         fileName = ((fileName != null && !fileName.isEmpty ( )) ? fileName : defaultFile);
         try {
             Path path = Paths.get ( ClassLoader.getSystemResource ( fileName ).toURI ( ) );
-            return Files.readAllLines( path );
+            return Files.readAllLines ( path );
         } catch ( Exception e ) {
             e.printStackTrace ( );
         }
