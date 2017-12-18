@@ -28,21 +28,13 @@ class ValidatorTest extends Validator {
 
     @Test
     void isValidCommand_returnTrueforValidCommand() {
-        String commandList =  "MOVE 123" ;
-        Assertions.assertTrue ( validate.isValidCommand ( commandList ) );
+        Assertions.assertTrue ( validate.isValidCommand (  "MOVE 123" ) );
     }
 
-//    @Test
-//    void isValidCommand_returnTrue() {
-//        List<String> commandList = Arrays.asList ( "MOVE", "LEFT", "RIGHT" );
-//        Assertions.assertTrue ( validate.isValidCommand ( commandList ) );
-//    }
-//
-//    @Test
-//    void isValidCommand_returnFalseforInvalid() {
-//        List<String> commandList = Arrays.asList ( "hype" );
-//        Assertions.assertFalse ( validate.isValidCommand ( commandList ) );
-//    }
+    @Test
+    void isValidCommand_returnFalseforInvalid() {
+        Assertions.assertFalse ( validate.isValidCommand ( "hype" ) );
+    }
 
     @Test
     void validateMove_returnTrue() {

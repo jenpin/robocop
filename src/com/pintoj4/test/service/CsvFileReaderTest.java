@@ -6,20 +6,14 @@ import org.junit.jupiter.api.*;
 import java.util.List;
 
 
-/**
- * Created by jpinto on 14/12/2017.
- */
+
 class CsvFileReaderTest extends CsvFileReader {
 
     private static CsvFileReader reader;
 
     @BeforeAll
     static void setUp() {
-        reader = new CsvFileReader ();
-    }
-
-    @AfterEach
-    void tearDown() {
+        reader = new CsvFileReader ( );
     }
 
     @Test

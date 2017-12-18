@@ -2,6 +2,7 @@ package com.pintoj4.main.service;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,17 +14,16 @@ public class CsvFileReader implements FileReader {
 
     @Override
     public List<String> readFile(String fileName) {
-        fileName = ((fileName != null && !fileName.isEmpty ()) ? fileName : defaultFile );
-        List<String> commandList = new ArrayList<> ( );
+
+        fileName = ((fileName != null && !fileName.isEmpty ( )) ? fileName : defaultFile);
 
         try {
-            Iterator<String> iter = Files.lines ( Paths.get ( fileName ) ).iterator ( );
-            while (iter.hasNext ( )) {
-                commandList.add ( iter.next ( ) );
-            }
+
+            return Files.readAllLines(Paths.get ( fileName ));
+
         } catch ( IOException e ) {
             e.printStackTrace ( );
         }
-        return commandList;
+        return null;
     }
 }
